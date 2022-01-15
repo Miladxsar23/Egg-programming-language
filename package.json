@@ -1,0 +1,24 @@
+{
+  "name": "egg-programming-language",
+  "version": "1.0.0",
+  "description": "a simple programming language with javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miladxsar23/Egg-programming-language.git"
+  },
+  "keywords": [
+    "simple",
+    "javascript",
+    "programming-language"
+  ],
+  "author": "Milad shiriyan Dehkordi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Miladxsar23/Egg-programming-language/issues"
+  },
+  "homepage": "https://github.com/Miladxsar23/Egg-programming-language#readme"
+}
