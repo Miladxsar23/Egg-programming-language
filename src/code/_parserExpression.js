@@ -21,3 +21,5 @@ function parseExpressions(program) {
         throw new SyntaxError("unexpected syntax : ", program)
     return parseApply(expr, program.slice(match(0).length))               
 }
+
+module.exports.parseExpressions = parseExpressions
