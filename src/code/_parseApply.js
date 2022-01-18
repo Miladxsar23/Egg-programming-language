@@ -21,6 +21,6 @@ function parseApply(expr, program) {
             throw new SyntaxError("expected ',' or ')'")
         }
     }
-    return parseApply(program.slice(1))
+    return parseApply(expr, program.slice(1))
 }
 module.exports.parseApply = parseApply;
