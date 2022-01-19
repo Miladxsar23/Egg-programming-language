@@ -9,7 +9,7 @@ function parse(program) {
     const { expr, rest } = parseExpressions(program)
     if (skipSpace(rest).length > 0)
         throw new SyntaxError("unexpected test after program")
-    return expr
+    return expr;
 }
 
 module.exports.parse = parse;
