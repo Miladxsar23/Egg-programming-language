@@ -23,5 +23,5 @@ async function run(pathname) {
     }
 }
 
-run(process.argv[2]).then(res => console.log(res), failure => console.log(failure))
+run(process.argv[2]).then(res => {}, failure => console.log(failure))
 

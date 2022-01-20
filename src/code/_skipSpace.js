@@ -10,4 +10,4 @@ function skipSpace(str) {
         return str.slice(first)
 }
 
-module.exports.skipSpace = skipSpace
+module.exports = { skipSpace }

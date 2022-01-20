@@ -41,4 +41,4 @@ specialForms.define = function (args, scope) {
     return value
 }
 
-module.exports.specialForms = specialForms
+module.exports = { specialForms }
