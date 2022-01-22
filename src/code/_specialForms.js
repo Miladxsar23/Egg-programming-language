@@ -40,5 +40,24 @@ specialForms.define = function (args, scope) {
     scope[args[0].name] = value
     return value
 }
-
+//////////////////-------function----------////////////////
+specialForms.fun = function (args, scope) {
+    if (!args.length)
+        throw new SyntaxError("Functions need a body");
+    let body = args[args.length - 1];
+    let params = args.slice(0, args.length - 1).map(expr => {
+        if (expr.type !== "word")
+            throw new SyntaxError("parameters names must be words")
+        return expr.name;
+    })
+    return function (...arguments) {
+        if (arguments.length !== params.length)
+            throw new TypeError("wrong number of arguments")
+        const localScope = Object.create(scope)
+        for (let i = 0; i < arguments.length; i++) {
+            localScope[params[i]] = arguments[i]
+        }
+        return evaluate(body, localScope)
+    }
+}
 module.exports = { specialForms }
