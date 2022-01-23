@@ -60,4 +60,21 @@ specialForms.fun = function (args, scope) {
         return evaluate(body, localScope)
     }
 }
+///////////////////----------set------------///////////////////////
+specialForms.set = (args, scope) => {
+    if (args.length != 2 || args[0].type !== "word")
+        return new SyntaxError("incorrect use of set")
+    let name = args[0].name
+    let value = evaluate(args[1], scope)
+    for (; ;) {
+        if (!scope) {
+            throw new ReferenceError(`variable ${args[0].name} not define`)
+        }
+        if (Object.prototype.hasOwnProperty.call(scope, name)) {
+            scope[name] = value
+            return value
+        }
+        scope = Object.getPrototypeOf(scope)
+    }
+}
 module.exports = { specialForms }
