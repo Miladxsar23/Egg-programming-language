@@ -1,0 +1,5 @@
+# test "set" special form of language to set variable with scope level
+do(define(x, 4),
+   define(setx, fun(val, set(x, val))),
+   setx(50),
+   print(x))
