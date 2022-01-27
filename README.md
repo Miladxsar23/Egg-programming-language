@@ -70,6 +70,8 @@ In the next step, just run its interpreter, Egg.js, with node and send your prog
 
  ```shell
 node src/code/Egg.js <path of your egg file>
+//example
+node src.cide/egg.js test.egg
 ```
 
 ## Contributing
